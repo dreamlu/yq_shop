@@ -1,0 +1,51 @@
+<view class="main">
+  <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="100%" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="selected">
+    <view class="select-title">
+      <text>精选主题</text>
+    </view>
+    <view class="select-top">
+      <view class="select-top-small">
+        <navigator url="list/list">
+          <image src="/image/s1.png"></image>
+        </navigator>
+      </view>
+      <view class="select-top-small">
+        <navigator url="list/list">
+          <image src="/image/s2.png"></image>
+        </navigator>
+      </view>
+    </view>
+    <view class="select-bottom">
+      <navigator url="list/list">
+        <image src="/image/s3.png"></image>
+      </navigator>
+    </view>
+  </view>
+  <view class="newest">
+    <view class="newest-title">
+      <text>最近新品</text>
+    </view>
+
+    <view class="newest-box">
+      <view wx:for="{{goods}}" class='"newest-list"'>
+          <navigator url="details/details?id={{item.Id}}">
+            <image src="{{domain+item.Goods_picture_address}}"></image>
+            <view class="newest-text">
+              <text>{{item.Goods_name}}</text>
+            </view>
+            <view class="newest-text">
+              <text>￥ {{item.Goods_prices}}</text>
+            </view>
+          </navigator>
+      </view>
+    </view>
+
+  </view>
+</view>
