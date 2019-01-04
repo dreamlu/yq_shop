@@ -31,6 +31,6 @@ App({
 ,
   globalData: {
     hasLogin: false,
-    domain: 'http://10.43.1.151:8009',
+    domain: 'http://192.168.31.193:8009',
   }
 })
