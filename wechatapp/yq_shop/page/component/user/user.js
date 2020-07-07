@@ -13,16 +13,16 @@ Page({
   onLoad(){
     var self = this;
     /**
-     * 获取用户信息
+     * 获取用户信息,升级参考：https://developers.weixin.qq.com/community/develop/doc/0000a26e1aca6012e896a517556c01
      */
-    wx.getUserInfo({
-      success: function(res){
-        self.setData({
-          thumb: res.userInfo.avatarUrl,
-          nickname: res.userInfo.nickName
-        })
-      }
-    })
+    // wx.getUserInfo({
+    //   success: function(res){
+    //     self.setData({
+    //       thumb: res.userInfo.avatarUrl,
+    //       nickname: res.userInfo.nickName
+    //     })
+    //   }
+    // })
 
     /**
      * 发起请求获取订单列表信息
